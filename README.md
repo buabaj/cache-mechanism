@@ -40,10 +40,15 @@ pip install -r requirements.txt
 
 2. Set up your redis server and add your database configuration to `redis_config.py`
 
-3. Run code from terminal in your project root directory using:
+3. Start your redis server in yout terminal using the command:
+```bash
+redis-server
+``` 
+
+4. Run code from terminal in your project root directory using:
 
 ```bash
 python3 app.py
 ```
 
-4. Head to `localhost:8000/docs` in your browser to test the CRUD Endpoints and documentation in an interactive SWAGGER UI API Documentation playground/
+5. Head to `localhost:8000/docs` in your browser to test the Implementation of the Cache Mechanism in the CRUD Endpoints and documentation in an interactive SWAGGER UI API Documentation playground/
