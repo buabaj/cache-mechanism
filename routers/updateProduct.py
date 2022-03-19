@@ -2,6 +2,9 @@ from fastapi import APIRouter, HTTPException
 from redis_config import r
 from models import Product
 import json
+from CacheMechanism.cache import CacheStorage
+
+cache_storage = CacheStorage()
 
 router = APIRouter()
 
@@ -25,6 +28,7 @@ async def update_product(product_id: int, product: Product):
 
     if r.exists(product_id):
         r.set(product_id, data)
+        cache_storage.backup(product_id, data)
         return {"message": "Product updated successfully"}
     else:
         raise HTTPException(

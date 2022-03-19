@@ -1,4 +1,5 @@
 import threading
+import json
 
 
 class CacheStorage:
@@ -47,6 +48,13 @@ class CacheStorage:
         name = data.get("product_name")
         description = data.get("product_description")
         return name, description
+
+    def backup(self, id, data):
+        if id in CacheStorage.cache.keys():
+            old_data = CacheStorage.cache.get(id)
+            CacheStorage.cache.update({id: old_data, id: json.loads(data)})
+        else:
+            CacheStorage.set(id, data)
 
 
 # print(cache)
