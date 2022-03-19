@@ -50,6 +50,7 @@ class CacheStorage:
         return name, description
 
     def backup(self, id, data):
+        '''This endpoint loads data that has been changed back to the local cache memory'''
         if id in CacheStorage.cache.keys():
             old_data = CacheStorage.cache.get(id)
             CacheStorage.cache.update({id: old_data, id: json.loads(data)})
