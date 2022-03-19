@@ -9,6 +9,9 @@ router = APIRouter()
 
 @router.post("/add-product")
 async def add_product(product: Product):
+    '''
+    This endpoint will add a product to the database.
+    '''
     if product.product_id == "":
         raise HTTPException(status_code=400, detail="Product ID is required")
     elif product.product_name == "":

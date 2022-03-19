@@ -10,7 +10,10 @@ app.include_router(updateProduct.router)
 
 
 @app.get("/")
-async def root(request: Request):
+async def index(request: Request):
+    '''
+    This is the entry point to the API Gateway
+    '''
     return {"message": "Hello World"}
 
 

@@ -8,6 +8,9 @@ router = APIRouter()
 
 @router.put("/update-product/{product_id}")
 async def update_product(product_id: int, product: Product):
+    '''
+    This endpoint will update an item in the database by the id
+    '''
     if product.product_id == "":
         raise HTTPException(status_code=400, detail="Product ID is required")
     elif product.product_name == "":

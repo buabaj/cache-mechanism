@@ -11,6 +11,9 @@ router = APIRouter()
 
 @router.get("/get-product/{product_id}")
 async def get_product(product_id: int):
+    '''
+    This endpoint will get a product from the database.
+    '''
     if product_id not in CacheStorage.cache.keys():
         # check if data exists in redis
         if r.exists(product_id):

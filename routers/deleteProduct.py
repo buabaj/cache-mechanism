@@ -7,6 +7,9 @@ router = APIRouter()
 
 @router.delete("/delete-product/{product_id}", status_code=204)
 async def delete_product(product_id: int):
+    '''
+    This endpoint will delete a product from the database.
+    '''
     if r.exists(product_id):
         r.delete(product_id)
         return {'message': 'Product successfully deleted'}
