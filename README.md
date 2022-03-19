@@ -29,26 +29,33 @@ This project was built using the Python FastAPI framework and Redis for key-valu
 
 # Project Setup
 
-1. Clone this repo, activate the virtual environment and install the requirements. Make sure you have Python 3.7+ installed.
+1. Clone this repo, activate the virtual environment and install the requirements. Make sure you have Python 3.7+ installed. Change directory to the cache-mechanism directory after.
 
 ```bash
 git clone git@github.com:buabaj/cache-mechanism.git
 cd cache-mechanism
+```
+
+2. Create and activate a virtual environment for the requirements of your project.
+
+```bash
+python3 -m venv cache-env
 source cache-env/bin/activate
 pip install -r requirements.txt
 ```
 
-2. Set up your redis server and add your database configuration to `redis_config.py`
+3. Set up your redis server and add your database configuration to `redis_config.py`
 
-3. Start your redis server in yout terminal using the command:
+4. Start your redis server in yout terminal using the command:
+   
 ```bash
 redis-server
 ``` 
 
-4. Run code from terminal in your project root directory using:
+5. Run code from terminal in your project root directory using:
 
 ```bash
 python3 app.py
 ```
 
-5. Head to `localhost:8000/docs` in your browser to test the Implementation of the Cache Mechanism in the CRUD Endpoints and documentation in an interactive SWAGGER UI API Documentation playground/
+6. Head to `localhost:8000/docs` in your browser to test the Implementation of the Cache Mechanism in the CRUD Endpoints and documentation in an interactive SWAGGER UI API Documentation playground/
