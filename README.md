@@ -39,14 +39,14 @@ cd cache-mechanism
 2. Create and activate a virtual environment for the requirements of your project.
 
 ```bash
-python3 -m venv cache-env
+python3 -m venv cache-env/
 source cache-env/bin/activate
 pip install -r requirements.txt
 ```
 
 3. Set up your redis server and add your database configuration to `redis_config.py`
 
-4. Start your redis server in yout terminal using the command:
+4. Start your redis server in your terminal using the command:
    
 ```bash
 redis-server
@@ -58,4 +58,4 @@ redis-server
 python3 app.py
 ```
 
-6. Head to `localhost:8000/docs` in your browser to test the Implementation of the Cache Mechanism in the CRUD Endpoints and documentation in an interactive SWAGGER UI API Documentation playground/
+6. Head to `localhost:8000/docs` in your browser to test the Implementation of the Cache Mechanism in the CRUD Endpoints and documentation in an interactive SWAGGER UI API Documentation playground
