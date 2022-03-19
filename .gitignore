@@ -25,7 +25,7 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-cache-env/
+#cache-env/
 MANIFEST
 
 # PyInstaller
@@ -103,7 +103,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-#.env
+.env
 .vscode/
 .venv
 env/
