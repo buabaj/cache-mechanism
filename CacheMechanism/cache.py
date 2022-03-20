@@ -5,7 +5,7 @@ import json
 class CacheStorage:
     '''
     This Class is a slim implementation of a local cache storage using the dictionary approach.
-    This cache has a stale time of 5 minutes after which all items stored locally in cache expires and is rendered invalid.
+    This cache storage has a built-in stale time of 5 minutes after which all items stored locally in cache expires and is rendered invalid.
     '''
 
     # set stale time to 5 minutes
